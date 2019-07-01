@@ -18,3 +18,6 @@ $ npx gulp ejs
 
 autoprefixer:
 $ npm install gulp-autoprefixer --save-dev
+
+browser-sync:
+$ npm install browser-sync

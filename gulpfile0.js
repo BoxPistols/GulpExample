@@ -6,17 +6,26 @@ var ejs = require("gulp-ejs");
 var rename = require("gulp-rename");
 var replace = require("gulp-replace");
 
-const browserSync = require('browser-sync');
+var browserSync = require('browser-sync');
 
-// サーバーを立ち上げる
-browserSync.init({
-  server: './',
-  files: './',
+// gulp.task('default', ['browser-sync']);
+
+gulp.task('browser-sync', function() {
+    browserSync({
+        server: {
+             baseDir: "/"       //対象ディレクトリ
+            ,index  : "index.html"      //インデックスファイル
+        }
+    });
 });
 
-gulp.task("default", function() {
-  gulp.watch("css/**/*.sass", gulp.series("sass"));
-  gulp.watch("ejs/**/*.ejs", gulp.series("ejs"));
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
+
+gulp.task("default", ['browser-sync'], function() {
+  gulp.watch("css/**/*.sass", gulp.series("sass"),  ['bs-reload']);
+  gulp.watch("ejs/**/*.ejs", gulp.series("ejs"),  ['bs-reload']);
 });
 
 // Sass
@@ -35,8 +44,6 @@ gulp.task("ejs", function() {
     .pipe(ejs({}, {}, {
       ext: '.html'
     }))
-    .pipe(rename({
-      extname: ".html"
-    }))
+    .pipe(rename({ extname: ".html" }))
     .pipe(gulp.dest("./"));
 });
