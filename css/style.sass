@@ -1,2 +1,68 @@
-body
-  color: steelblue
+=fx_center
+  display: flex
+  align-items: center
+  justify-content: center
+
+$white: #f4f4f4
+$dark: #4c4c4c
+
+a
+  text-decoration: none
+  color: #4c4c4c
+
+.tx_center
+  text-align: center
+
+// 375 812
+.wrap
+  font-family: serif
+  width: 100%
+  max-width: 375px
+  height: 812px
+
+  // height: 100%
+  margin: auto
+  background-color: $white
+  color: #4c4c4c
+
+  &.dark
+    background-color: #4c4c4c
+
+.cont
+  text-align: center
+
+  h1
+    font-size: 42px
+    padding-top: 120px
+
+  &.dark
+    color: $white
+
+    h1
+      color: $white
+
+  .logo svg
+    // background-color: #fff
+    width: 156px
+    height: 103px
+    margin: auto
+
+  .login
+    width: 200px
+    height: 40px
+    margin: 90px auto 40px
+    background-color: #d8d8d8
+
+    +fx_center
+
+  .signUp a
+    color: #fff
+
+input[type="text"]
+  background: none
+  border: none
+  border-bottom: 2px solid lightgray
+  font-size: 20px
+  font-family: serif
+  line-height: 1.5
+  margin: 15px auto
