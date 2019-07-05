@@ -3,6 +3,14 @@
 <% var path = '.'; %>
 <% include common/_header %>
 
+
+<%
+  var page_id = {
+    id: '01'
+  }
+%>
+<%- include('_if', {page: page_id}) %>
+
 <!-- content -->
 <div id="content">
   <div class="inner">
@@ -43,13 +51,13 @@
             <input type="text" name="" value="" placeholder="Creater Name">
           </div>
 
-<div class="selectGroup">
-<select class="" name="">
-  <option value="a">a</option>
-  <option value="a">a</option>
-</select>
-</div>
-<!-- /.selectGroup -->
+          <div class="selectGroup">
+            <select class="minimal" name="">
+              <option value="a">a</option>
+              <option value="a">a</option>
+            </select>
+          </div>
+          <!-- /.selectGroup -->
         </form>
         <!-- /.formArea -->
 
@@ -59,6 +67,8 @@
 
       </div>
     </div>
+
+    <% include common/_footer %>
+
   </div><!-- /inner -->
 </div><!-- /content -->
-<% include common/_footer %>

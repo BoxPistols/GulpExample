@@ -2,12 +2,23 @@
 <% var description = 'トップページのディスクリプション'; %>
 <% var path = '.'; %>
 <% include common/_header %>
-
+<%#
+  var page_id = {
+    id: '02'
+  }
+%>
+<%#- include('_if', {page: page_id}) %>
 <!-- content -->
 <div id="content">
   <div class="inner">
     <div class="wrap dark">
       <div class="cont dark">
+
+        <% var myParam = 'Hello! EJS?';%>
+        <div>
+          <%= myParam %>
+        </div>
+
         <h1>
           Review
         </h1>
@@ -32,7 +43,9 @@
           </a>
         </div>
       </div>
+
     </div>
+
+    <% include common/_footer %>
   </div><!-- /inner -->
 </div><!-- /content -->
-<% include common/_footer %>
