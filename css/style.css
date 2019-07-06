@@ -40,6 +40,9 @@ a {
   .cont .signUp a {
     color: #fff; }
 
+.tex-center {
+  text-align: center; }
+
 input[type="text"] {
   background: none;
   border: none;
@@ -79,3 +82,20 @@ select {
   select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000; }
+
+.upload {
+  width: 100%;
+  max-width: 400px;
+  margin: auto; }
+
+label.upFile {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  width: 100%;
+  height: 200px;
+  font-size: 30px;
+  transition: 0.2s; }

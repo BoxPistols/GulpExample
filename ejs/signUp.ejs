@@ -3,43 +3,22 @@
 <% var path = '.'; %>
 <% include common/_header %>
 
-
-<%
-  var page_id = {
-    id: '01'
-  }
-%>
-<%- include('_if', {page: page_id}) %>
-
 <!-- content -->
 <div id="content">
   <div class="inner">
     <div class="wrap">
       <div class="cont">
         <h1>
-          SignUp
+          SignUp!
         </h1>
         <div class="logo">
-
-          <?xml version="1.0" encoding="UTF-8"?>
-          <svg width="157px" height="157px" viewBox="0 0 157 157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
-            <title>A808E3E8-A430-402A-895C-E3E4752791CA</title>
-            <desc>Created with sketchtool.</desc>
-            <g id="Swipe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Form" transform="translate(-109.000000, -152.000000)">
-                <rect id="-g-Background" fill="#F4F4F4" x="0" y="0" width="375" height="812"></rect>
-                <g id="Camera" transform="translate(109.000000, 152.000000)">
-                  <circle id="-g-Oval" fill="#D8D8D8" cx="78.5" cy="78.5" r="78.5"></circle>
-                  <g id="camera" transform="translate(40.000000, 50.000000)">
-                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="9" width="77" height="49"></rect>
-                    <rect id="Rectangle" fill="#FFFFFF" x="17" y="0" width="42" height="10"></rect>
-                    <ellipse id="Oval" fill="#D8D8D8" cx="38" cy="33.5" rx="16" ry="16.5"></ellipse>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
+          <div class="upload">
+            <label class="upFile" for="file_photo">
+              <% include component/icon_Camera %>
+              <!-- 	＋写真を選択 -->
+              <input type="file" id="file_photo" style="display:none;">
+            </label>
+          </div>
         </div>
 
         <form action="" class="formArea">
@@ -67,8 +46,6 @@
 
       </div>
     </div>
-
-    <% include common/_footer %>
 
   </div><!-- /inner -->
 </div><!-- /content -->

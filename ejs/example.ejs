@@ -1,0 +1,31 @@
+<% var title = 'トップページのタイトルタグ'; %>
+<% var description = 'トップページのディスクリプション'; %>
+<% var path = '.'; %>
+<% include common/_header %>
+
+<!-- content -->
+<div id="content">
+  <div class="inner">
+    <div class="wrap  tex-center"">
+
+      <% var page_id = { id: '02' } %>
+      <%-
+        include('_if', {
+        page: page_id
+      })
+      %>
+
+      <div class="cont">
+
+        <% var myParam = 'Example';%>
+        <h1>
+          <%= myParam %>
+        </h1>
+
+      </div>
+
+      <% include common/_footer %>
+    </div>
+
+</div><!-- /inner -->
+</div><!-- /content -->

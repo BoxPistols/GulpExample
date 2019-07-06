@@ -1,10 +1,10 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var autoprefixer = require("gulp-autoprefixer");
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
 
-var ejs = require("gulp-ejs");
-var rename = require("gulp-rename");
-var replace = require("gulp-replace");
+const ejs = require("gulp-ejs");
+const rename = require("gulp-rename");
+const replace = require("gulp-replace");
 
 const browserSync = require('browser-sync');
 
@@ -26,7 +26,7 @@ gulp.task("sass", function() {
     .pipe(autoprefixer({
       browsers: ['last 1 version', 'ie >= 11', 'iOS >= 10', 'Android >= 4.4'],
     }))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('css/style.css'));
 });
 
 // EJS
