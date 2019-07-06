@@ -60,5 +60,24 @@ a
 
 .tex-center
   text-align: center
+.tex-left
+  text-align: left
 
-@import "form"
+=fx
+  display: flex
+=fx_col
+  +fx
+  flex-direction: column
+=fx_center
+  display: flex
+  justify-content: center
+  align-items: center
+
+.fx
+  +fx
+.fx_col
+  +fx_col
+.fx_center
+  +fx_center
+
+

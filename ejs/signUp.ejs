@@ -8,6 +8,7 @@
   <div class="inner">
     <div class="wrap">
       <div class="cont">
+
         <h1>
           SignUp!
         </h1>
@@ -30,22 +31,48 @@
             <input type="text" name="" value="" placeholder="Creater Name">
           </div>
 
-          <div class="selectGroup">
-            <select class="minimal" name="">
-              <option value="a">a</option>
-              <option value="a">a</option>
-            </select>
+          <div class="fx_center">
+            <div class="selectGroup fx_col">
+              <label for="age" class="tex-left">Age</label>
+              <select class="minimal" name="age">
+                <option value="年齢" disabled="disabled" selected>年齢を選択</option>
+                <% for (var i = 18 - 1; i <= 99; i++) { %>
+                  <option value="<%= i+1 %>"><%= i+1 %>歳</option>
+                <% } %>
+              </select>
+            </div>
+
+            <div class="selectGroup fx_col">
+              <label for="age" class="tex-left">Gender</label>
+              <select class="minimal" name="">
+                <option value="gender" disabled="disabled" selected>性別を選択</option>
+                <option value="男性">男性</option>
+                <option value="女性">女性</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
           </div>
-          <!-- /.selectGroup -->
-        </form>
-        <!-- /.formArea -->
 
-        <div class="cancel tx_center">
-          <p><a href="/">Cancel</a></p>
-        </div>
+          <div class="fx_center">
+            <div class="selectGroup fx_col">
+              <label for="genre" class="tex-left">Gender</label>
+              <select class="minimal" name="">
+                <option value="genre" disabled="disabled" selected>ジャンルを選択してください</option>
+                <option value="音楽">音楽</option>
+                <option value="園芸">園芸</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+          </div>
+      </form>
+      <!-- /.formArea -->
 
+      <div class="cancel tx_center">
+        <p><a href="/">Cancel</a></p>
       </div>
-    </div>
 
-  </div><!-- /inner -->
+    </div>
+  </div>
+
+</div><!-- /inner -->
 </div><!-- /content -->
